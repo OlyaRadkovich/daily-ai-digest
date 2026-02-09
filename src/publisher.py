@@ -7,11 +7,12 @@ from datetime import datetime
 
 def format_for_google_chat(text: str) -> str:
     """
-    Converts standard Markdown to a Google Chat compatible format.
+    Cleans text from Perplexity footnotes and formats it for Google Chat.
     """
-
+    text = re.sub(r'\s*\[\d+\]', '', text)
     text = re.sub(r'\[(.*?)\]\((.*?)\)', r'<\2|\1>', text)
     text = text.replace("**", "*")
+
     header = f"🚀 *Daily AI Digest – {datetime.now().strftime('%d.%m.%Y')}*\n\n"
 
     return header + text
