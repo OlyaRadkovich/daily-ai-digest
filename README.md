@@ -1,7 +1,6 @@
-# 🚀 Daily AI News Digest for QA & SDET
+# 🚀 Weekly AI News Digest for QA & SDET
 
-A fully automated Python bot that fetches critical technical news regarding **Applied AI in QA and Software Development** and delivers a concise digest to a private **Google Chat** space every weekday.
-
+A fully automated Python bot that fetches critical technical news regarding **Applied AI in QA and Software Development** and delivers a concise digest to a private **Google Chat** space.
 
 ## ✨ Features
 
@@ -11,8 +10,9 @@ A fully automated Python bot that fetches critical technical news regarding **Ap
     * **Manual QA:** AI for test case generation, visual regression, bug reporting.
     * **SDET Tools:** Cursor, GitHub Copilot, Local LLMs for coding tests.
     * **Strategic Context:** AI Regulation, Security, and industry shifts.
+    * **Education & Guides:** Tutorials and practical guides for AI in QA.
 * **Google Chat Formatting:** Automatically cleans up Markdown links and removes citations for a clean chat experience.
-* **Scheduled Automation:** Runs automatically **Monday through Friday at 07:00 UTC**.
+* **Scheduled Automation:** Runs automatically.
 * **Zero-Maintenance:** Deployed via GitHub Actions with no need for a dedicated server.
 
 ## 🛠 Tech Stack
@@ -29,7 +29,7 @@ A fully automated Python bot that fetches critical technical news regarding **Ap
 ```text
 daily-ai-digest/
 ├── .github/workflows/
-│   └── daily_run.yml    # Cron schedule configuration (Mon-Fri)
+│   └── daily_run.yml    # Cron schedule configuration (Every Monday)
 ├── src/
 │   ├── __init__.py
 │   ├── client_ai.py     # Prompt engineering & OpenRouter API client
@@ -83,7 +83,7 @@ To make the bot run automatically:
 * `GOOGLE_CHAT_WEBHOOK_URL`
 
 
-4. The workflow is defined in `.github/workflows/daily_run.yml` and will trigger automatically at 09:00 UTC on weekdays.
+4. The workflow is defined in `.github/workflows/daily_run.yml`.
 
 You can also trigger it manually via the **Actions** tab -> **Run workflow**.
 
@@ -95,4 +95,4 @@ You can also trigger it manually via the **Actions** tab -> **Run workflow**.
 * `perplexity/sonar-pro` (Good balance)
 
 
-* **Change Schedule:** Edit the cron expression in `.github/workflows/daily_run.yml`.
+* **Change Schedule:** Edit the cron expression in `.github/workflows/daily_run.yml`

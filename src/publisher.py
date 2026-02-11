@@ -13,7 +13,7 @@ def format_for_google_chat(text: str) -> str:
     text = re.sub(r'\[(.*?)\]\((.*?)\)', r'<\2|\1>', text)
     text = text.replace("**", "*")
 
-    header = f"🚀 *Daily AI Digest – {datetime.now().strftime('%d.%m.%Y')}*\n\n"
+    header = f"🚀 *Weekly AI Digest – {datetime.now().strftime('%d.%m.%Y')}*\n\n"
 
     return header + text
 
