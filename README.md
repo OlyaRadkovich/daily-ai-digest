@@ -27,9 +27,9 @@ A fully automated Python bot that fetches critical technical news regarding **Ap
 ## 📂 Project Structure
 
 ```text
-daily-ai-digest/
+weekly-ai-digest/
 ├── .github/workflows/
-│   └── daily_run.yml    # Cron schedule configuration (Every Monday)
+│   └── run_schedule.yml    # Cron schedule configuration (Every Monday)
 ├── src/
 │   ├── __init__.py
 │   ├── client_ai.py     # Prompt engineering & OpenRouter API client
@@ -83,7 +83,7 @@ To make the bot run automatically:
 * `GOOGLE_CHAT_WEBHOOK_URL`
 
 
-4. The workflow is defined in `.github/workflows/daily_run.yml`.
+4. The workflow is defined in `.github/workflows/run_schedule.yml`.
 
 You can also trigger it manually via the **Actions** tab -> **Run workflow**.
 
@@ -95,4 +95,4 @@ You can also trigger it manually via the **Actions** tab -> **Run workflow**.
 * `perplexity/sonar-pro` (Good balance)
 
 
-* **Change Schedule:** Edit the cron expression in `.github/workflows/daily_run.yml`
+* **Change Schedule:** Edit the cron expression in `.github/workflows/run_schedule.yml`
